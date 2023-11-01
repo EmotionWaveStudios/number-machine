@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+const App = () => {
+  let first = document.getElementById("first").innerHTML;
+  let second = document.getElementById("second").innerHTML;
+  let third = document.getElementById("third").innerHTML;
+  let fourth = document.getElementById("fourth").innerHTML;
+  let fifth = document.getElementById("fifth").innerHTML;
 
-function App() {
-  const [count, setCount] = useState(0)
+  function reverse() {}
+
+  function sum() {
+    document.getElementById("result").innerHTML =
+      first + second + third + fourth + fifth;
+  }
+
+  function transform() {}
 
   return (
-    <>
+    <div>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+        <h1>Number Machine</h1>
+        <h2>
+          Enter five numbers in the spaces provided and transform them as you
+          see fit.
+        </h2>
 
-export default App
+        <input type="number" id="first" min={0} max={9} />
+        <input type="number" id="second" min={0} max={9} />
+        <input type="number" id="third" min={0} max={9} />
+        <input type="number" id="fourth" min={0} max={9} />
+        <input type="number" id="fifth" min={0} max={9} />
+
+        <button onClick={reverse}>Reverse</button>
+        <button onClick={sum}>Sum</button>
+        <button onClick={transform}>Transform</button>
+
+        <br />
+        <h2 id="result"></h2>
+        <br />
+      </div>
+    </div>
+  );
+};
+
+export default App;
