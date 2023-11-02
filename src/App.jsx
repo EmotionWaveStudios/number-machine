@@ -1,18 +1,47 @@
 const App = () => {
-  let first = document.getElementById("first").innerHTML;
-  let second = document.getElementById("second").innerHTML;
-  let third = document.getElementById("third").innerHTML;
-  let fourth = document.getElementById("fourth").innerHTML;
-  let fifth = document.getElementById("fifth").innerHTML;
+  function reverse() {
+    let first = parseInt(document.getElementById("first").value);
+    let second = parseInt(document.getElementById("second").value);
+    let third = parseInt(document.getElementById("third").value);
+    let fourth = parseInt(document.getElementById("fourth").value);
+    let fifth = parseInt(document.getElementById("fifth").value);
 
-  function reverse() {}
-
-  function sum() {
     document.getElementById("result").innerHTML =
-      first + second + third + fourth + fifth;
+      "The reverse of the selected elements is: " +
+      fifth +
+      fourth +
+      third +
+      second +
+      first;
   }
 
-  function transform() {}
+  function sum() {
+    let first = parseInt(document.getElementById("first").value);
+    let second = parseInt(document.getElementById("second").value);
+    let third = parseInt(document.getElementById("third").value);
+    let fourth = parseInt(document.getElementById("fourth").value);
+    let fifth = parseInt(document.getElementById("fifth").value);
+
+    document.getElementById("result").innerHTML =
+      "The sum of the selected elements is: " +
+      parseInt(first + second + third + fourth + fifth);
+  }
+
+  function transform() {
+    let first = parseInt(document.getElementById("first").value) + 1;
+    let second = parseInt(document.getElementById("second").value) + 1;
+    let third = parseInt(document.getElementById("third").value) + 1;
+    let fourth = parseInt(document.getElementById("fourth").value) + 1;
+    let fifth = parseInt(document.getElementById("fifth").value) + 1;
+
+    document.getElementById("result").innerHTML =
+      "The transformation of the selected elements results in: " +
+      first +
+      second +
+      third +
+      fourth +
+      fifth;
+  }
 
   return (
     <div>
